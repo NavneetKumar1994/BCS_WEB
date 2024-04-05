@@ -1,0 +1,92 @@
+body {
+  position: relative;
+  /* padding: 5px 15px; */
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); 
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://c8y.doxcdn.com/image/upload/c_fill,fl_progressive,h_800,q_auto,w_1600/fu1w99bcr3z66yhsw8rs.webp') center/cover no-repeat;
+  z-index: -5; 
+}
+
+.welcome-header {
+     position: relative;
+     color:crimson; 
+     background:linear-gradient(45deg, oldlace, turquoise,oldlace,turquoise, oldlace);
+     opacity: 0.9;
+     font-size: 50px;
+     font-weight: bold; 
+     display: flex;
+     align-items: center;
+   }
+   
+ .image1{
+     width: 100px;
+     height: 80px;
+     margin: 2px 0 2px 20px;
+     border-radius: 50%;
+     animation:translateLogo1 30s linear infinite;
+}
+
+.image2{
+     width: 100px;
+     height: 80px;
+     margin: 2px 20px 2px 0;
+     border-radius: 50%;
+     animation:translateLogo2 30s linear infinite;
+}
+
+   @keyframes translateLogo1 {
+     0% {
+       transform: translateX(0);
+     }
+     50% {
+       transform: translateX(100vw);
+     }
+     100% {
+       transform: translateX(0);
+     }
+   } 
+   
+   @keyframes translateLogo2 {
+     0% {
+       transform: translateX(0);
+     }
+     50% {
+       transform: translateX(-100vw);
+     }
+     100% {
+       transform: translateX(0);
+     }
+   }   
+ 
+
+.form-container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.register-form{
+     padding: 30px;
+     width: 100%;
+
+}
+

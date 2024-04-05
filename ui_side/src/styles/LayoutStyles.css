@@ -1,0 +1,187 @@
+.main {
+  position: relative;
+  /* padding: 5px 15px; */
+  min-height: 100vh;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Adjust the opacity here */
+  z-index: -2;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://c8y.doxcdn.com/image/upload/c_fill,fl_progressive,h_800,q_auto,w_1600/fu1w99bcr3z66yhsw8rs.webp') center/cover no-repeat;
+  z-index: -5; /* Ensure the image is behind the overlay */
+}
+
+
+.layout {
+     display: flex;
+   }
+   
+   .sidebar {
+     height: 100vh;
+     width: 25%;
+     border: 1.5px solid red;
+     border-radius: 5px;
+     background-color:transparent;
+     box-shadow: 0 0 10px white;
+     margin-right: 20px;
+     color: crimson;
+     overflow-y: auto;
+    }
+
+   .content {
+     width: 100%;
+     height: 100%;
+   }
+   
+   .body {
+     height: 85.5vh;
+     box-shadow: 0 0 10px white;
+     background-color:transparent;
+     border: 1.5px solid red;
+     border-radius: 8px;
+     overflow-y: auto; 
+    }
+
+   .logo h6 {
+     font-size: 2rem;
+     font-weight:bold;
+     text-align: center;
+     margin: 10px 0px;
+     animation: colorTransition 8s infinite;
+   }
+
+   .logo p {    
+    font-size: 1.2rem;
+    font-weight:bold;
+    text-align: center;
+    animation: colorTransition 8s infinite;
+  }
+
+   @keyframes colorTransition {
+    0%,100% {
+      color: black;
+    }
+    25%,75% {
+      color:cadetblue;
+    }
+    50% {
+      color: crimson
+    }  
+  }
+  
+   .logo img {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     margin-left: 25%;
+     margin-top: 5px;
+     animation: rotateLogo 15s linear infinite;
+   }
+   @keyframes rotateLogo {
+    from {
+      transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+
+
+
+
+   .menu {
+     margin-top: 30px;
+   }
+   .menu-item {
+     margin-top: 30px;
+     font-weight: bold;
+   }
+   .menu-item a {
+     color:black;
+     text-decoration: none;
+     font-size: 1.2rem;
+     transition: color 0.3s ease;
+   }
+   .menu-item a:hover {
+    color: crimson;
+    font-weight: bold;
+  }
+  
+   .menu-item i {
+     font-size: 1.2rem;
+     margin: 0 15px;
+   }
+   .active {
+    background:linear-gradient(45deg, oldlace, turquoise,oldlace,turquoise, oldlace);
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 5px;
+   }
+   .active a,
+   .active i {
+     color: rgb(51, 1, 1);
+   }
+
+   .header{
+    height: 10vh;
+    padding:2px;
+    margin-bottom: 35px;
+    box-shadow: 0 0 10px white;
+    /* background-color:rgb(14, 75, 75); */
+    background:linear-gradient(45deg, oldlace, turquoise,oldlace,turquoise, oldlace);
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border: 2px solid red;
+    border-radius: 10px;
+   }
+
+   .header-content {
+    display: flex;
+    align-items: center;
+  }
+
+  /* @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      overflow-y: auto;
+    }
+  }
+ */
+
+
+   /* .header h1{
+      font-size: 2rem;
+      color:teal;
+      font-weight: bold;
+      margin-left: 20px;
+   }   */
+
+  .header-content i {
+    margin-right: 20px;
+    font-size: 1.5rem;
+  }
+  .header-content a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:rgb(244, 62, 30);
+    margin:10px;
+    /* text-transform: uppercase; */
+  }
